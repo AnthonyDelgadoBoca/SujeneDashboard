@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emily's Dashboard</title>
+  <title>Sujene's Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link th:href="@{/css/index.css}" rel="stylesheet">
   <link th:href="@{/css/header.css}" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="/favicon-32.png">
+
+  <link rel="apple-touch-icon"
+        href="images/apple-touch-icon.png">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="theme-color" content="#d41475">
+
+  <meta name="apple-mobile-web-app-capable"
+        content="yes">
+
+  <meta name="apple-mobile-web-app-title"
+        content="My App">
 </head>
 <body>
 
 <div th:replace="~{fragments/header :: header}"></div>
 
 <div class="container mt-4">
-  <h1>Welcome, Lee ❤️</h1>
+  <h1>Welcome, mi coreana ❤️</h1>
 
   <div class="p-3 mb-2 bg-secondary bg-gradient text-white">
     Welcome mi amor, I've made this webapp to practice springboot, this here is her dashboard, I want you to take a look around and see what I've been working on
     <br /><br />
     This here is your dashboard, some basic information, reminders and alike, hopefully you look around before moving on,
-    <span style="cursor: pointer;" onclick="window.location.href='/secret'">you'll never know what you find</span>
+    you'll never know what you find
     <br /><br />
-    yes, I Love and Miss you
+    yes, I Love and miss you
   </div>
 
   <!-- Reminders Section -->
@@ -38,7 +54,7 @@
   <div class="card mt-3">
     <div class="card-body">
       <h5 class="card-title">Countdown to Our Anniversary</h5>
-      <p class=""><strong>Our anniversary is May 23rd</strong></p>
+      <p class=""><strong>Our anniversary is October 26th</strong></p>
       <p class="card-text" th:text="'Only ' + ${daysUntilAnniversary} + ' days left!'"></p>
     </div>
   </div>

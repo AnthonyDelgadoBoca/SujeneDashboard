@@ -9,6 +9,23 @@
     <script type="module" src="/js/app.js"></script>
 
     <script id="compliments-data" type="application/json" th:utext="${complimentsJson}"></script>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+            href="/favicon-32.png">
+
+    <link rel="apple-touch-icon"
+            href="images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="theme-color" content="#d41475">
+
+    <meta name="apple-mobile-web-app-capable"
+            content="yes">
+
+    <meta name="apple-mobile-web-app-title"
+            content="My App">
 </head>
 <body>
 <div th:insert="~{fragments/header :: header}"></div>
@@ -27,7 +44,7 @@
     <div class="card mt-3">
         <div class="card-body">
             <h5 class="card-title">Click for a fact</h5>
-            <button id="complimentBtn" class="btn btn-success">Click if you are (emi)Lee</button>
+            <button id="complimentBtn" class="btn btn-success">Click if you are a JKG</button>
             <p id="complimentText" class="mt-2"></p>
         </div>
     </div>
@@ -37,22 +54,22 @@
             <h5 class="card-title">Memory Quiz</h5>
             <p>Where did we have our first date?</p>
             <button class="btn btn-outline-primary quiz-answer">palacio de los jugos</button>
-            <button class="btn btn-outline-primary quiz-answer" id="correct-answer">Thaikyo (Thai and Sushi)</button>
+            <button class="btn btn-outline-primary quiz-answer" id="correct-answer">Danbi</button>
             <button class="btn btn-outline-primary quiz-answer">Je ne sais pas</button>
             <p id="quizResult" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
             <p>What is true?</p>
             <button class="btn btn-outline-primary quiz-answer2" id="correct-answer2">I Love you</button>
-            <button class="btn btn-outline-primary quiz-answer2" id="correct-answer2">I want to hug and hold you</button>
-            <button class="btn btn-outline-primary quiz-answer2" id="correct-answer2">I will always be there for you</button>
+            <button class="btn btn-outline-primary quiz-answer2" id="correct-answer2">I want to hold you</button>
+            <button class="btn btn-outline-primary quiz-answer2" id="correct-answer2">Insert lewd and inappropiate thing here</button>
             <p id="quizResult2" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What is Lee's favorite activity?</p>
-            <button class="btn btn-outline-primary quiz-answer3" id="correct-answer3">Climbing</button>
-            <button class="btn btn-outline-primary quiz-answer3">running</button>
-            <button class="btn btn-outline-primary quiz-answer3">bench pressing</button>
+            <p>What is one of Sujene's favorite activity?</p>
+            <button class="btn btn-outline-primary quiz-answer3" id="correct-answer3">Caffeine consumption</button>
+            <button class="btn btn-outline-primary quiz-answer3">Running</button>
+            <button class="btn btn-outline-primary quiz-answer3">Climbing</button>
             <p id="quizResult3" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
@@ -63,66 +80,66 @@
             <p id="quizResult4" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What is Lee's favorite animal?</p>
-            <button class="btn btn-outline-primary quiz-answer5">You are stupid to think any one person has one favorite animal</button>
-            <button class="btn btn-outline-primary quiz-answer5">Bold of you to assume people have favorite animals</button>
-            <button class="btn btn-outline-primary quiz-answer5" id="correct-answer5">Frogs</button>
+            <p>What is Sujene's favorite animal noise?</p>
+            <button class="btn btn-outline-primary quiz-answer5">You are stupid to think any one person has one favorite animal noise</button>
+            <button class="btn btn-outline-primary quiz-answer5">Bold of you to assume people have favorite animal noises</button>
+            <button class="btn btn-outline-primary quiz-answer5" id="correct-answer5">Beagle</button>
             <p id="quizResult5" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>Lee's favorite stand?</p>
-            <button class="btn btn-outline-primary quiz-answer6">Echo's act 1,2, or 3 (Koichi's stand)</button>
-            <button class="btn btn-outline-primary quiz-answer6">Star Platinum (Jotaro's stand)</button>
-            <button class="btn btn-outline-primary quiz-answer6" id="correct-answer6">Purple Haze (Fugo's stand)</button>
+            <p>What is Sujene's favorite food?</p>
+            <button class="btn btn-outline-primary quiz-answer6">18 eggs</button>
+            <button class="btn btn-outline-primary quiz-answer6">Arroz con frijoles</button>
+            <button class="btn btn-outline-primary quiz-answer6" id="correct-answer6">Sushi</button>
             <p id="quizResult6" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What was the first show we watched together?</p>
-            <button class="btn btn-outline-primary quiz-answer7">Yu-Gi-Oh!</button>
-            <button class="btn btn-outline-primary quiz-answer7" id="correct-answer7">Shogun</button>
-            <button class="btn btn-outline-primary quiz-answer7">La Rosa de Guadalupe</button>
+            <p>What was the first movie we watched together?</p>
+            <button class="btn btn-outline-primary quiz-answer7">The ring</button>
+            <button class="btn btn-outline-primary quiz-answer7" id="correct-answer7">Borat</button>
+            <button class="btn btn-outline-primary quiz-answer7">La Rosa de Guadalupe (la pelicula)</button>
             <p id="quizResult7" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What side of the bed does Lee prefer?</p>
-            <button class="btn btn-outline-primary quiz-answer8">The one farthest from any screen</button>
-            <button class="btn btn-outline-primary quiz-answer8">The left side</button>
-            <button class="btn btn-outline-primary quiz-answer8" id="correct-answer8">The side closest to the door</button>
+            <p>What kind of the bed does Sujene prefer?</p>
+            <button class="btn btn-outline-primary quiz-answer8">A comfortable one</button>
+            <button class="btn btn-outline-primary quiz-answer8">A big one</button>
+            <button class="btn btn-outline-primary quiz-answer8" id="correct-answer8">One that is broken</button>
             <p id="quizResult8" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
             <p>What is potentially our most inside joke?</p>
             <button class="btn btn-outline-primary quiz-answer9">Insert slur here</button>
-            <button class="btn btn-outline-primary quiz-answer9" id="correct-answer9">Charlie Hitler</button>
-            <button class="btn btn-outline-primary quiz-answer9">I Suppose</button>
+            <button class="btn btn-outline-primary quiz-answer9" id="correct-answer9">1392</button>
+            <button class="btn btn-outline-primary quiz-answer9">*smacks hand repeatedly instead of holding*</button>
             <p id="quizResult9" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What was Lee's first console?</p>
-            <button class="btn btn-outline-primary quiz-answer10" id="correct-answer10">Gameboy Advance SP</button>
-            <button class="btn btn-outline-primary quiz-answer10">Wii</button>
-            <button class="btn btn-outline-primary quiz-answer10">PS2</button>
+            <p>What was Sujene's favorite game series?</p>
+            <button class="btn btn-outline-primary quiz-answer10" id="correct-answer10">Pokemon</button>
+            <button class="btn btn-outline-primary quiz-answer10">Sonic the Hedgehog</button>
+            <button class="btn btn-outline-primary quiz-answer10">some other 3rd thing</button>
             <p id="quizResult10" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What is the name of the frog that Lee made for her boyfriend's backpack?</p>
-            <button class="btn btn-outline-primary quiz-answer11" id="correct-answer11">Pepito</button>
-            <button class="btn btn-outline-primary quiz-answer11">Juanito</button>
-            <button class="btn btn-outline-primary quiz-answer11">Negrito</button>
+            <p>What is the name of the rabbit living in Sujene's house?</p>
+            <button class="btn btn-outline-primary quiz-answer11" id="correct-answer11">Sujene (The rabbit)</button>
+            <button class="btn btn-outline-primary quiz-answer11">Sujene (your girlfriend)</button>
+            <button class="btn btn-outline-primary quiz-answer11">Robert </button>
             <p id="quizResult11" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What drink did Lee have immediately after being told that Tonio was in Love with her?</p>
-            <button class="btn btn-outline-primary quiz-answer12">Water</button>
-            <button class="btn btn-outline-primary quiz-answer12" id="correct-answer12">Expresso Martini</button>
+            <p>What food did Sujene have immediately before being asked out?</p>
+            <button class="btn btn-outline-primary quiz-answer12">Galbi</button>
+            <button class="btn btn-outline-primary quiz-answer12" id="correct-answer12">20z ribeye with pasta</button>
             <button class="btn btn-outline-primary quiz-answer12">[REDACTED]</button>
             <p id="quizResult12" class="mt-2 text-success"></p>
         </div>
         <div class="card-body">
-            <p>What is Dante from Devil May Cry's best weapon (according to your Love)?</p>
-            <button class="btn btn-outline-primary quiz-answer13">Alastor</button>
-            <button class="btn btn-outline-primary quiz-answer13">Ifrit</button>
-            <button class="btn btn-outline-primary quiz-answer13" id="correct-answer13">Holy Water</button>
+            <p>What is Shiga from Mystic heroes' best attack (according to your Love)?</p>
+            <button class="btn btn-outline-primary quiz-answer13">Using a sword</button>
+            <button class="btn btn-outline-primary quiz-answer13">small gusts of wind</button>
+            <button class="btn btn-outline-primary quiz-answer13" id="correct-answer13">Literal fucking tornados</button>
             <p id="quizResult13" class="mt-2 text-success"></p>
         </div>
     </div>

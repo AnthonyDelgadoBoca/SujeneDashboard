@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emily's Spotify - Lee's Dashboard</title>
+    <title>Sujene's Spotify - Sujene's Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link th:href="@{/css/index.css}" rel="stylesheet">
     <link th:href="@{/css/header.css}" rel="stylesheet">
@@ -31,16 +31,32 @@
           color: #666;
         }
     </style>
+        <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+            href="/favicon-32.png">
+
+    <link rel="apple-touch-icon"
+            href="images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="theme-color" content="#d41475">
+
+    <meta name="apple-mobile-web-app-capable"
+            content="yes">
+
+    <meta name="apple-mobile-web-app-title"
+            content="My App">
 </head>
 <body>
 
 <div th:replace="~{fragments/header :: header}"></div>
 
 <div class="container mt-4">
-    <h1>🎵 Emily's Spotify</h1>
+    <h1>🎵 Sujene's Spotify</h1>
 
     <div class="p-3 mb-4 bg-secondary bg-gradient text-white rounded">
-        <p>Hey mi amor! This is my Spotify dashboard where you can see my playlists and favorite tracks.
+        <p>Hey mi amor, This is my Spotify dashboard where you can see my playlists and favorite tracks.
             You can play song previews right here and discover new music I'm enjoying!
             It's our personal music sharing space ❤️</p>
     </div>
@@ -66,10 +82,10 @@
                          style="width: 120px; height: 120px;">
                         <span class="display-4">🎵</span>
                     </div>
-                    <h4 th:text="|${profile.displayName}'s Music|">Emily's Music</h4>
+                    <h4 th:text="|${profile.displayName}'s Music|">Sujene's Music</h4>
                     <p class="text-muted" th:text="${profile.email}"></p>
                     <div class="mt-3">
-                        <a href="https://open.spotify.com/user/emily" target="_blank" class="btn btn-success">
+                        <a href="https://open.spotify.com/user/sujene" target="_blank" class="btn btn-success">
                             <i class="bi bi-spotify"></i> Open Full Spotify
                         </a>
                     </div>

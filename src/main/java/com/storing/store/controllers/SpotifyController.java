@@ -293,16 +293,16 @@ public class SpotifyController {
 
             JsonNode json = objectMapper.readTree(response.getBody());
             SpotifyProfile profile = new SpotifyProfile();
-            profile.setDisplayName(json.get("display_name").asText("Emily"));
+            profile.setDisplayName(json.get("display_name").asText("Sujene"));
             if (json.has("images") && json.get("images").size() > 0) {
                 profile.setImageUrl(json.get("images").get(0).get("url").asText());
             }
-            profile.setEmail("Emily's Spotify");
+            profile.setEmail("Sujene's Spotify");
             return profile;
         } catch (Exception e) {
             SpotifyProfile profile = new SpotifyProfile();
-            profile.setDisplayName("Emily");
-            profile.setEmail("Emily's Spotify");
+            profile.setDisplayName("Sujene");
+            profile.setEmail("Sujene's Spotify");
             return profile;
         }
     }
@@ -499,7 +499,7 @@ public class SpotifyController {
         for (String name : defaultPlaylists) {
             SpotifyPlaylist playlist = new SpotifyPlaylist();
             playlist.setName(name);
-            playlist.setDescription("Emily's " + name);
+            playlist.setDescription("Sujene's " + name);
             playlist.setTrackCount(new Random().nextInt(50) + 20);
             playlists.add(playlist);
         }

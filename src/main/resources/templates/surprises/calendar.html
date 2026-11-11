@@ -9,6 +9,22 @@
   <link th:href="@{/css/header.css}" rel="stylesheet">
   <meta th:if="${_csrf}" th:content="${_csrf.token}" name="_csrf"/>
   <meta th:if="${_csrf}" th:content="${_csrf.headerName}" name="_csrf_header"/>
+      <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+            href="/favicon-32.png">
+
+    <link rel="apple-touch-icon"
+            href="images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="theme-color" content="#d41475">
+
+    <meta name="apple-mobile-web-app-capable"
+            content="yes">
+
+    <meta name="apple-mobile-web-app-title"
+            content="My App">
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}"></div>

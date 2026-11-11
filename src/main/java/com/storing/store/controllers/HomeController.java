@@ -31,10 +31,10 @@ public class HomeController {
     @GetMapping("/")
     public String index(Model model) {
         int nextAniyear = LocalDate.now().getYear();
-        LocalDate anniversary = LocalDate.of(nextAniyear, 5, 23);
+        LocalDate anniversary = LocalDate.of(nextAniyear, 10, 26);
         long daysUntil = ChronoUnit.DAYS.between(LocalDate.now(), anniversary);
         if (daysUntil < 0){
-            anniversary = LocalDate.of(nextAniyear+1, 5, 23);
+            anniversary = LocalDate.of(nextAniyear+1, 10, 26);
         }
         daysUntil = ChronoUnit.DAYS.between(LocalDate.now(), anniversary);
         model.addAttribute("daysUntilAnniversary", daysUntil);
@@ -59,8 +59,8 @@ public class HomeController {
         model.addAttribute("upcomingEvents", upcomingEvents);
         model.addAttribute("hasEvents", !upcomingEvents.isEmpty());
 
-        // Get weather data her house: 26.642874, -80.066658
-        WeatherData weather = getWeatherData("26.642874", "-80.066658");
+        // Get weather data her house: 34.0041, -118.4111
+        WeatherData weather = getWeatherData("34.0041", "-118.4111");
         model.addAttribute("weather", weather);
         return "index";
     }
@@ -82,7 +82,7 @@ public class HomeController {
     @GetMapping("/secret")
     public String secretPage(Model model) {
         model.addAttribute("message",
-                "Emily, this is our private digital garden. " +
+                "Sujene, this is our private digital garden. " +
                         "No one else can see this but you and me ❤️");
         return "secret";
     }
@@ -100,23 +100,22 @@ public class HomeController {
                 "Probably thinking of kissing you right now",
                 "My hand misses your hand (and your throat)",
                 "I love to make you happy and cared for",
-                "You’re the best part of my day",
+                "I miss rubbing your nose",
                 "I love how your smile lingers in my head",
                 "My favorite place is always close you",
                 "You make me want to be better every day",
                 "I love the way you see the world",
                 "You’re the most beautiful thought I have",
-                "I crave your voice more than white rice",
+                "I crave your voice more than white rice (BIG DEAL)",
                 "I never get tired of you, not for a second",
                 "You’re my safest place and my wildest dream",
-                "I’m addicted to the way you look at me",
                 "Your happiness is my favorite mission",
                 "Even silence with you feels perfect",
                 "I’d choose you in every lifetime",
                 "My tongue remember yours too well",
                 "You’re the best surprise life ever gave me",
                 "The thought of you still gives me butterflies (I struggle to eat)",
-                "Your touch calms my whole body",
+                "You are petting me (or I am petting you) in my head right now",
                 "Every night, I wish you were here beside me"
         );
 
@@ -210,57 +209,101 @@ public class HomeController {
         }
     }
 
-    private String getDailyReminder() {
-        DayOfWeek day = LocalDate.now().getDayOfWeek();
-        int hour = LocalTime.now().getHour();
+    
+private String getDailyReminder() {
+    DayOfWeek day = LocalDate.now().getDayOfWeek();
+    int hour = LocalTime.now().getHour();
 
-        // Morning (6 AM - 11 AM)
-        if (hour >= 6 && hour < 12) {
-            switch(day) {
-                case MONDAY: case THURSDAY: return "Good morning my love, remember to take your vitamins";
-                case TUESDAY: case WEDNESDAY: return "Good morning mi amor, remember to take your vitamins and to get ready for school";
-                case FRIDAY: return "Good morning my love, remember to take your vitamins, you'll see me so soon";
-                case SATURDAY: case SUNDAY: return "Weekend morning is the best, best likelihood of seeing you";
-                default: return "Rise and shine, my love! Thinking of you this morning.";
-            }
-        }
-        // Afternoon (12 AM - 1 PM)
-        else if (hour >= 12 && hour < 13) {
-            switch(day) {
-                case MONDAY: case TUESDAY: case WEDNESDAY: case THURSDAY: case FRIDAY: return "AT LUNCH, please call me instead, I miss you";
-                case SATURDAY: case SUNDAY: return "50 bucks says you are with me or thinking of me I bet";
-                default: return "Hope your day is going well, my love! Thinking of you this afternoon.";
-            }
-        }
-        // Afternoon (1 PM - 4 PM)
-        else if (hour >= 13 && hour < 16) {
-            switch(day) {
-                case MONDAY: case THURSDAY: return "I'm at work still, but I miss you";
-                case TUESDAY: case WEDNESDAY: return "Good luck at school mi vida, I'm just at work";
-                case FRIDAY: return "I'm at work, but only for now, you'll see me soon";
-                case SATURDAY: case SUNDAY: return "50 bucks says you are with me or thinking of me";
-                default: return "Hope your day is going well, my love! Thinking of you this afternoon.";
-            }
-        }
-        // Evening (4 PM - 9 PM)
-        else if (hour >= 16 && hour < 21) {
-            switch(day) {
-                case MONDAY: case THURSDAY: return "Working out, I know you are working so hard right now";
-                case TUESDAY: case WEDNESDAY: return "Working out, I know you are working so hard right now in class right now";
-                case FRIDAY: return "I'm driving to you now, don't worry";
-                case SATURDAY: case SUNDAY: return "50 bucks says you are with me or thinking of me";
-                default: return "Hope your day is going well, my love! Thinking of you this afternoon.";
-            }
-        }
-        // Night (9 PM - 4 AM)
-        else {
-            switch(day) {
-                case MONDAY: case TUESDAY: case WEDNESDAY: case THURSDAY: case FRIDAY: return "Good night mi vida, you'll see me soon, your eyes should be closed";
-                case SATURDAY: case SUNDAY: return "Let's have a good night, I always have fun with you";
-                default: return "Hope your day is going well, my love! Thinking of you this afternoon.";
-            }
+    boolean remoteDay = day == DayOfWeek.MONDAY || day == DayOfWeek.WEDNESDAY;
+    boolean inPersonDay = day == DayOfWeek.TUESDAY || day == DayOfWeek.THURSDAY;
+    boolean weekday = day != DayOfWeek.SATURDAY && day != DayOfWeek.SUNDAY;
+
+    // Morning (6 AM - 11 AM)
+    if (hour >= 6 && hour < 12) {
+        switch (day) {
+            case MONDAY:
+                return "Good morning mi amor, Remote work means you have absolutely no excuse not to miss me today";
+            case TUESDAY:
+                return "Good morning my pretty girl. Go be ridiculously competent at the office. Try not to make everyone fall in love with you";
+            case WEDNESDAY:
+                return "Rise and shine, my beautiful remote worker, I Love you";
+            case THURSDAY:
+                return "Good morning mi coreana, Another day of being beautiful AND employed. Honestly, be more considerate for those of us without...";
+            case FRIDAY:
+                return "GOOD MORNING mi vida. It's Friday. I hope you're prepared to be missed this weekend";
+            case SATURDAY:
+                return "Good morning mi vida, beginning of the weekend";
+            case SUNDAY:
+                return "Buenos días mi vida. Sunday looks better when I imagine spending it with you";
+            default:
+                return "Good morning, my favorite distraction. I hope your day is as pretty as you are";
         }
     }
+
+    // Lunch (12 PM - 1 PM)
+    else if (hour >= 12 && hour < 13) {
+        switch (day) {
+            case MONDAY: case WEDNESDAY:
+                return "hopefully you are eating lol, I miss you";
+            case TUESDAY: case THURSDAY:
+                return "Lunch check: did you bring to the office? I hoep you did, I Love you";
+            case FRIDAY:
+                return "A COMER ( to eat)";
+            case SATURDAY: case SUNDAY:
+                return "I bet you're doing something cute right now. Send evidence. This is a completely legitimate investigation.";
+            default:
+                return "Lunch break, pretty girl. I miss you. That is all. Carry on.";
+        }
+    }
+
+    // Afternoon (1 PM - 4 PM)
+    else if (hour >= 13 && hour < 16) {
+        switch (day) {
+            case MONDAY: case WEDNESDAY:
+                return "I bet you are working or studying, what a productive girl, I Love you";
+            case TUESDAY: case THURSDAY:
+                return "You're probably being productive at work. Very attractive, I miss you";
+            case FRIDAY:
+                return "Almost weekend mi vida...";
+            case SATURDAY: case SUNDAY:
+                return "Friendly reminder that you are cute, smart, and probably too good for me lol";
+            default:
+                return "Just checking in on my favorite human. Hope something made you smile today.";
+        }
+    }
+
+    // Evening (4 PM - 9 PM)
+    else if (hour >= 16 && hour < 21) {
+        switch (day) {
+            case MONDAY: case WEDNESDAY:
+                return "Work is hopefully wrapping up. Gym time or LSAT time? Either way, you got this my very msart JKG";
+            case TUESDAY: case THURSDAY:
+                return "You survived the office, now let's see if you can text your Antonio (Your Boyfriend), I Love you";
+            case FRIDAY:
+                return "It's Friday evening, mi amor. Please enjoy yourself";
+            case SATURDAY: case SUNDAY:
+                return "Gym? Studying? Relaxing? Whatever you're doing, I hope you know someone is proud of you";
+            default:
+                return "Hope you're having a lovely evening. I wish I could be there to annoy you in person.";
+        }
+    }
+
+    // Night (9 PM - 4 AM)
+    else {
+        switch (day) {
+            case MONDAY: case WEDNESDAY:
+                return "Enough working and studying, if you have to stall by looking here it's time to take a break";
+            case TUESDAY: case THURSDAY:
+                return "Enough working and studying, if you have to stall by looking here it's time to take a break";
+            case FRIDAY:
+                return "Enough working and studying, if you have to stall by looking here it's time to take a break";
+            case SATURDAY: case SUNDAY:
+                return "Goodnight pretty girl. I hope you fall asleep smiling";
+            default:
+                return "Goodnight mi vida. I wish I could give you a hug instead of sending this little notification.";
+        }
+    }
+}
 
 
 }

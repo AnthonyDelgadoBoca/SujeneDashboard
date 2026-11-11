@@ -8,6 +8,22 @@
     <link th:href="@{/css/open-when.css}" rel="stylesheet">
     <link th:href="@{/css/header.css}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+            href="/favicon-32.png">
+
+    <link rel="apple-touch-icon"
+            href="images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="theme-color" content="#d41475">
+
+    <meta name="apple-mobile-web-app-capable"
+            content="yes">
+
+    <meta name="apple-mobile-web-app-title"
+            content="My App">
 </head>
 <body>
 
@@ -17,8 +33,8 @@
     <h1>Open When... </h1>
 
     <div class="p-3 mb-2 bg-secondary bg-gradient text-white">
-        Mi amor, these are special letters for different moments in your life.
-        Click on an envelope to open a letter for when you need it most.
+        Mi amor, these are special letters for different small moments in your life.
+        Click on an envelope to open a letter for when you need it.
         <br /><br />
         Each one contains my thoughts, feelings, and memories for that specific moment.
     </div>
@@ -36,7 +52,7 @@
 
         <!-- Letter 2 -->
         <div class="col-md-4 mb-4">
-            <div class="card h-100 envelope-card" onclick="openLetter('need-love')">
+            <div class="card h-100 envelope-card" onclick="openLetter('need-Love')">
                 <img src="/images/envelope.png" class="card-img-top" alt="Envelope">
                 <div class="card-body">
                     <h5 class="card-title text-center">You Need Love</h5>
@@ -306,11 +322,11 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you miss me, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
-                    <p>When you miss me, remember that afternoon when we went climbing, we weren't even dating yet and I was head over heels</p>
+                    <p>My dearest Sujene,</p>
+                    <p>When you miss me, remember that afternoon when we went to Santa Monica, we weren't even dating yet and I was head over heels</p>
                     <p>Every second apart is just counting down until I can kiss you again</p>
                     <p>I Miss you mi vida</p>
                     <p>Forever yours,</p>
@@ -322,18 +338,18 @@
 </div>
 
 <!-- Letter 2 -->
-<div id="need-love" class="letter-modal">
+<div id="need-Love" class="letter-modal">
     <div class="letter-content">
         <div class="modal-header">
             <h2 class="modal-title">When You Need Love</h2>
-            <button type="button" class="btn-close" onclick="closeModal('need-love')"></button>
+            <button type="button" class="btn-close" onclick="closeModal('need-Love')"></button>
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you need Love, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you need Love from me, remember that I would do anything for you,</p>
                     <p>I am always going to give you all the Love I can offer, I can only ever hope it's enough</p>
                     <p>You can always text or call me if and when you need me, I will be there, I want to give you the world</p>
@@ -354,12 +370,12 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you are happy, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you are happy, I am happy for you,</p>
-                    <p>Seeing your happy smile, seeing you laugh and emote the way you do makes me want to keep you like that forever</p>
+                    <p>Seeing your happy smile, seeing you laugh, emote, and dance the way you do makes me want to keep you like that forever</p>
                     <p>When I see you eat food you enjoy, when I see you laugh at my comically unfunny (or worse, your unfunny) jokes,</p>
                     <p>I can't help but want to kiss you and preserve it as long as I can</p>
                     <p>Forever yours,</p>
@@ -379,10 +395,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel bad, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you feel bad, remember how much I care about you,</p>
                     <p>Life won't be perfect, especially one with me, but I can always tell you that it gets better</p>
                     <p>even if you are upset with me, if you need me to be there with you through the tough times, I will be there</p>
@@ -403,13 +419,13 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you are anxious, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you are anxious, remember that this will pass,</p>
                     <p>You may be anxious about family, education, career, anything</p>
-                    <p>But you are never alone, you have a loving group of friends, (from what I understand) a loving mother, and Winter and Kana</p>
+                    <p>But you are never alone, you have a loving group of friends, (from what I understand) a caring mother, and many secret admirers I'm sure</p>
                     <p>You are never alone, you always have someone to lean on, and how you feel will get better mi amor</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -428,10 +444,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel shame, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you feel shame, remember how much good you do,</p>
                     <p>You won't always feel perfect with yourself, nobody does, but when you are ashamed remember that you also have many reasons to feel pride</p>
                     <p>You make everyone's life better, I've seen and felt it firsthand, never doubt yourself as a person, I am always impressed with you</p>
@@ -452,10 +468,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you struggle with school or work, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you struggle with school or work, remember that everyone struggles, it's normal and not a source of shame, no matter how stressful it may feel</p>
                     <p>You are such a smart girl and such a hard working girl it's hard to imagine someone like you even struggles with that, but remember you aren't alone, I'm here and so are your friends</p>
                     <p>Forever yours,</p>
@@ -470,15 +486,15 @@
 <div id="struggle-with-family" class="letter-modal">
     <div class="letter-content">
         <div class="modal-header">
-            <h2 class="modal-title">When You Struggle With Your Family Or Friends</h2>
+            <h2 class="modal-title">When You Struggle With Your Friends</h2>
             <button type="button" class="btn-close" onclick="closeModal('struggle-with-family')"></button>
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
-                <p>When you struggle with your friends and family, remember...</p>
+                <p>My Love,</p>
+                <p>When you struggle with your friends, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you struggle with those close to you, remember that they are often struggling with you</p>
                     <p>Not everyone is going to be smart enough to realize how amazing you make their life, but to those that do; no matter the argument make sure you treat them like your friends, I'm sure they'll do the same</p>
                     <p>I Love you, I'm always here to listen, these conflicts will happen but always remember you aren't alone, and if someone treats you badly, you hold no obligation</p>
@@ -499,10 +515,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel low with yourself, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you struggle with yourself, if you struggle with how you look or how you feel about your actions or just yourself,</p>
                     <p>Remember that I Love you for you, and many many other people Love you for you as well, You are the prettiest, smartest, most hard working girl I know</p>
                     <p>You aren't always going to be proud of yourself, but please go easy on my girl, she's trying her best and I'm always so proud of her</p>
@@ -523,10 +539,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel great, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you feel great, make sure you know you have every reason to</p>
                     <p>You work so hard at home, at school, at working, at anything really (me especially)</p>
                     <p>Always take the time to appreciate yourself the way I try to appreciate you, I Love you</p>
@@ -547,10 +563,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel hungry, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>Please eat</p>
                     <p>Ideally some kind of animal product is involved</p>
                     <p>Forever yours,</p>
@@ -570,10 +586,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel proud, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You deserve to feel proud of yourself, I always see how strong and hard-working you are with the people in your life and the things you do</p>
                     <p>Remember that I am always proud of you, and you should also be proud of you</p>
                     <p>Always be grateful for the people in your life that have helped you and always be proud of yourself</p>
@@ -586,7 +602,7 @@
 </div>
 
 <!-- Letter 13 -->
-<div id="no-sleep" class="letter-modal">
+<div id="no-sSujenep" class="letter-modal">
     <div class="letter-content">
         <div class="modal-header">
             <h2 class="modal-title">When You Can't Sleep</h2>
@@ -594,12 +610,12 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you can't sleep, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You shouldn't even be reading this if you are supposed to be sleeping right now</p>
-                    <p>But you know very well I'm just a call away, if you even needed me to, I'd drive up at a moments notice</p>
+                    <p>But you know very well I'm just a call away, though that's usually not your style lol, it's ok to be anxiosu too</p>
                     <p>I Love you, please close your eyes and call me if you need me</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -618,10 +634,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you want me close, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>I Love you, I also Love that you wanted to open this one,</p>
                     <p>I probably want you close right now too, but you'll see me so soon, and I'll make sure to hold and Love you</p>
                     <p>Unless you really need me right now, you know I'm always here for you, I miss how you feel on my skin</p>
@@ -642,15 +658,15 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you want to laugh and smile, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You really needed to open this one? you have a camera roll full of ridiculous pictures and videos of me?</p>
                     <p>You are such a silly girl, I Love you so much, you are MY gook after all</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
-                    <p>P.S. Charlie Hitler</p>
+                    <p>P.S. 1392</p>
                 </div>
             </div>
         </div>
@@ -666,12 +682,12 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you think about our future, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>It makes me happy you think about how our Love will look in the future,</p>
-                    <p>Whatever we are doing, wherever we are, I Know we'll be happy together, I'll work very hard to make it all reality</p>
+                    <p>Whatever we are doing, wherever we are, I know we'll be happy together, I'll work very hard to make it all reality</p>
                     <p>Everything will work out, as long as it's us</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -690,12 +706,12 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel lonely, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
-                    <p>I'll be honest, I can't really see you opening this one, you are always attracting such great attention</p>
-                    <p>I always see you with friends, with people who want to be around you. You are amazing that way</p>
+                    <p>My dearest Sujene,</p>
+                    <p>I'll be honest, I can't really see you opening this one, you are always attracting such great attention, I don't got that kinda charm</p>
+                    <p>I always see you talking well with friends, with people who want to be around you. You are amazing that way</p>
                     <p>You know very well that if you need me, I'm there. If it's you waiting for me, I'm sure I'll be done with whatever soon</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -714,12 +730,12 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you need motivation, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>When you need to feel motivated, remember just how hardworking you are and how far it has taken you,</p>
-                    <p>Bachelor's degree, Engineering exam, being such a strong and smart rock climber, you always amaze me, you should go out and amaze you too</p>
+                    <p>LSATs, working, being such a strong lifter and quick runner, you always amaze me, you should go out and amaze you too</p>
                     <p>If all else fails, I know you like to listen to music?</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -738,13 +754,13 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you are far, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>I know you are so far from me, it'll be a while before I can hold and hug you,</p>
                     <p>but it's all temporary, I know it sucks, I also miss touching you,</p>
-                    <p>but you'll see me soon, and I'll make sure to make up for the difference, hang in there for me</p>
+                    <p>but you'll see me soon, and I'll make sure to make up for the difference</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
                 </div>
@@ -762,10 +778,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel crazy and unheard, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You might be spiraling, you might be crying and thinking of doing something less than ideal,</p>
                     <p>but no matter how upset you are, you aren't crazy, how you feel is always valid, don't take this as an excuse to do something silly</p>
                     <p>but know that it's all going to be ok, these feelings will pass, especially when you surround yourself with good and caring people, you are not crazy I promise</p>
@@ -786,10 +802,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel unheard, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>I know how often it hurts to feel unheard, to be treated like your words or thoughts don't matter</p>
                     <p>I know even I can contribute to these feelings, sometimes I take a moment to understand you, but I am always trying to understand you. There are always people in your life that want to understand you</p>
                     <p>This feeling sucks, I know, but if you ever need to, I'll always listen to whatever you need to say</p>
@@ -810,11 +826,11 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When your stomach hurts, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
-                    <p>please ru your stomach, in a circular motion like I taught you</p>
+                    <p>My dearest Sujene,</p>
+                    <p>please rub your stomach, in a circular motion like I showed you</p>
                     <p>50 bucks says you just need to fart</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
@@ -833,10 +849,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel like a child, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You may feel like you are a child for doing or feeling a certain way, but you are not a child</p>
                     <p>you are a big girl with big feelings sometimes, and you just want to let it out, I'm always more than happy to listen and take care of you</p>
                     <p>but there is no reason to beat yourself up, you can always be my baby ;) (this is a wink)</p>
@@ -857,10 +873,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel stupid, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>You obviously aren't stupid, it goes without saying really</p>
                     <p>You are the smartest, hardest working girl, and I miss you so much, I don't know who is telling you this nonsense that you are stupid,</p>
                     <p>But you are very smart, my smart girl</p>
@@ -881,10 +897,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel judged, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>Whoever is judging you for whatever it may be, must be so bored or upset with their own life</p>
                     <p>There are people in your life who will never judge you (me included), you are always safe with those closest to you</p>
                     <p>But whatever you are being judged for, they are too much of a bum to notice it on themselves</p>
@@ -905,10 +921,10 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel blamed, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>Sometimes, we are blamed and it overwhelms our feelings of guilt or shame or a mix of many things</p>
                     <p>It's a rough thing, even if we know we aren't doing our best, we are all guilty of that, I'm sorry those feelings are coming out so negatively</p>
                     <p>But I promise you, whatever it may be, you are still you and I know you have a lot to feel proud for, always remember yourself, it's ok that bad feelings exist, they will come and go, I'll do my best to fix it when you say "I need you"</p>
@@ -929,13 +945,13 @@
         </div>
         <div class="modal-body">
             <div class="letter-paper p-4">
-                <p>My love,</p>
+                <p>My Love,</p>
                 <p>When you feel stuck, remember...</p>
                 <div class="letter-paper">
-                    <p>My dearest Lee,</p>
+                    <p>My dearest Sujene,</p>
                     <p>It can sometimes feel like hitting a boulder with your fist, knowing the rock won't move but you have nothing else to do</p>
                     <p>But know it's never like that forever, you are never stuck, not with your feelings, people, or anything else, you always have a solution so long as you don't give up</p>
-                    <p>And you'll always have me around for whenever you do feel like giving up, I'll support you until you are back on your feet</p>
+                    <p>And you'll have me around for whenever you do feel like giving up, I'll support you until you are back on your feet</p>
                     <p>Forever yours,</p>
                     <p>Antonio</p>
                 </div>
